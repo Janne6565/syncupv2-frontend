@@ -1,0 +1,77 @@
+$PAGE_BACKGROUND_COLOR: rgb(20, 20, 20);
+
+.page {
+  background-color: $PAGE_BACKGROUND_COLOR;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.layoutPage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.navBar {
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #020D14;
+  padding-top: 10vh;
+  padding-bottom: 3vh;
+  height: 87vh;
+  border-right: thin solid #050101;
+}
+
+.navBar > div {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.navBarHeader {
+  height: 10%;
+  width: 70% !important;
+}
+
+.navBarCenter {
+  height: 50%;
+}
+
+.navBarBottom {
+  height: 20%;
+}
+
+.outlet {
+  width: 100%;
+  height: 100vh;
+}
+
+.navIcon {
+  width: 100%;
+}
+
+.links:active {
+  // transform: translateX(2px) scale(1.05);
+}
+
+.links {
+  transition: all ease-in-out .2s;
+}
+
+.linkActive {
+  transform: translateX(5px);
+}
