@@ -64,14 +64,18 @@ $PAGE_BACKGROUND_COLOR: rgb(20, 20, 20);
   width: 100%;
 }
 
-.links:active {
-  // transform: translateX(2px) scale(1.05);
-}
-
 .links {
   transition: all ease-in-out .2s;
+
+  > svg {
+    transition: fill ease .3s;
+    fill: #7fd5d195;
+  }
 }
 
 .linkActive {
   transform: translateX(5px);
+  > svg {
+    fill: #7FD5D1;
+  }
 }

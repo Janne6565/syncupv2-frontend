@@ -65,9 +65,16 @@
 .links {
   transition: all ease-in-out 0.2s;
 }
+.links > svg {
+  transition: fill ease 0.3s;
+  fill: rgba(127, 213, 209, 0.5843137255);
+}
 
 .linkActive {
   transform: translateX(5px);
+}
+.linkActive > svg {
+  fill: #7FD5D1;
 }
 
 /*# sourceMappingURL=LayoutStyles.module.css.map */

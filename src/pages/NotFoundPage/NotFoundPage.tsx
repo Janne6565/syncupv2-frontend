@@ -4,8 +4,7 @@ import styles from "./NotFoundPage.module.scss";
 const NotFoundPage = () => {
   const location = useLocation();
   return (
-    <div>
-      <h2 style={{ color: "rgb(210, 210, 210)" }}>404</h2>
+    <div style={{ textTransform: "uppercase" }}>
       <h3>Oops! Page</h3>
       <h1>
         <span className={styles.cursive}>

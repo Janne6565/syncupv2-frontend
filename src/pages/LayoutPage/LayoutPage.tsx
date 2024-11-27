@@ -55,9 +55,9 @@ const links = {
       to: "/maps",
     },
     {
-      name: "Games",
+      name: "Ingame",
       icon: <SportsEsportsRounded sx={iconStyles} />,
-      to: "/games",
+      to: "/ingame",
     },
     {
       name: "Upload",

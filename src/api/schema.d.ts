@@ -4,666 +4,676 @@
  */
 
 export interface paths {
-    "/v1/authorized/post": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put: operations["updatePost"];
-        post: operations["createPost"];
-        delete: operations["deletePost"];
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+  "/v1/authorized/post": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/authorized/spot/": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["createSpot"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put: operations["updatePost"];
+    post: operations["createPost"];
+    delete: operations["deletePost"];
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/authorized/spot/": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/auth/user": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["createUser"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put?: never;
+    post: operations["createSpot"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/auth/user": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/auth/refresh-token": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["refreshToken"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put?: never;
+    post: operations["createUser"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/auth/refresh-token": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/auth/login": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["authenticate"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put?: never;
+    post: operations["refreshToken"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/auth/login": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/uploadImage": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["uploadPicture"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put?: never;
+    post: operations["authenticate"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/uploadImage": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/user/{userId}": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["user"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get?: never;
+    put?: never;
+    post: operations["uploadPicture"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/user/{userId}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/spot/": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getSpots"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["user"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/spot/": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/post": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getPosts"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["getSpots"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/post": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/post/{id}": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getPost"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["getPosts"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/post/{id}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/map/{mapId}": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getMapById"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["getPost"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/map/{mapId}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/unauthorized/map/": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getMaps"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["getMapById"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/unauthorized/map/": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    "/v1/authorized/user": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getUser"];
-        put?: never;
-        post?: never;
-        delete: operations["deleteUser"];
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
+    get: operations["getMaps"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v1/authorized/user": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
+    get: operations["getUser"];
+    put?: never;
+    post?: never;
+    delete: operations["deleteUser"];
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
 }
+
 export type webhooks = Record<string, never>;
+
 export interface components {
-    schemas: {
-        ImageCollectionDto: {
-            id?: string;
-            imageLooking?: components["schemas"]["ScaledImageDto"];
-            imageStanding?: components["schemas"]["ScaledImageDto"];
-            imageLanding?: components["schemas"]["ScaledImageDto"];
-        };
-        PostDto: {
-            id?: string;
-            title?: string;
-            user?: components["schemas"]["PublicUserDto"];
-            from?: components["schemas"]["SpotDto"];
-            to?: components["schemas"]["SpotDto"];
-            imageCollection?: components["schemas"]["ImageCollectionDto"];
-        };
-        PublicUserDto: {
-            id?: string;
-            usertag?: string;
-        };
-        ScaledImageDto: {
-            fullScaleUrl?: string;
-            thumbnailUrl?: string;
-            /** @enum {string} */
-            format?: "FULL_SCREEN" | "VERTICAL_BANNER" | "HORIZONTAL_BANNER_V1" | "HORIZONTAL_BANNER_V2" | "RECTANGLE_ICON" | "RECTANGLE_LARGE";
-        };
-        SpotDto: {
-            id?: string;
-            /** Format: float */
-            x?: number;
-            /** Format: float */
-            y?: number;
-            mapId?: string;
-        };
-        CreateSpotRequest: {
-            mapId: string;
-            /** Format: float */
-            x?: number;
-            /** Format: float */
-            y?: number;
-        };
-        RegisterUserRequest: {
-            usertag: string;
-            password: string;
-            email: string;
-        };
-        AuthenticationResponse: {
-            access_token?: string;
-            refresh_token?: string;
-            user_id?: string;
-        };
-        AuthenticationUserRequest: {
-            email?: string;
-            password?: string;
-        };
-        MapDto: {
-            id?: string;
-            name?: string;
-            displayIcon?: components["schemas"]["ScaledImageDto"];
-            listViewIcon?: components["schemas"]["ScaledImageDto"];
-            listViewIconTall?: components["schemas"]["ScaledImageDto"];
-            splashImage?: components["schemas"]["ScaledImageDto"];
-            stylizedImage?: components["schemas"]["ScaledImageDto"];
-            premierImage?: components["schemas"]["ScaledImageDto"];
-        };
-        PrivateUserDto: {
-            id?: string;
-            usertag?: string;
-            email?: string;
-            role?: string;
-        };
+  schemas: {
+    ImageCollectionDto: {
+      id?: string;
+      imageLooking?: components["schemas"]["ScaledImageDto"];
+      imageStanding?: components["schemas"]["ScaledImageDto"];
+      imageLanding?: components["schemas"]["ScaledImageDto"];
     };
-    responses: never;
-    parameters: never;
-    requestBodies: never;
-    headers: never;
-    pathItems: never;
+    PostDto: {
+      id?: string;
+      title?: string;
+      user?: components["schemas"]["PublicUserDto"];
+      from?: components["schemas"]["SpotDto"];
+      to?: components["schemas"]["SpotDto"];
+      imageCollection?: components["schemas"]["ImageCollectionDto"];
+    };
+    PublicUserDto: {
+      id?: string;
+      usertag?: string;
+    };
+    ScaledImageDto: {
+      fullScaleUrl?: string;
+      thumbnailUrl?: string;
+      /** @enum {string} */
+      format?:
+        | "FULL_SCREEN"
+        | "VERTICAL_BANNER"
+        | "HORIZONTAL_BANNER_V1"
+        | "HORIZONTAL_BANNER_V2"
+        | "RECTANGLE_ICON"
+        | "RECTANGLE_LARGE";
+    };
+    SpotDto: {
+      id?: string;
+      /** Format: float */
+      x?: number;
+      /** Format: float */
+      y?: number;
+      mapId?: string;
+    };
+    CreateSpotRequest: {
+      mapId: string;
+      /** Format: float */
+      x?: number;
+      /** Format: float */
+      y?: number;
+    };
+    RegisterUserRequest: {
+      usertag: string;
+      password: string;
+      email: string;
+    };
+    AuthenticationResponse: {
+      access_token?: string;
+      refresh_token?: string;
+      user_id?: string;
+    };
+    AuthenticationUserRequest: {
+      email?: string;
+      password?: string;
+    };
+    MapDto: {
+      id?: string;
+      name?: string;
+      displayIcon?: components["schemas"]["ScaledImageDto"];
+      listViewIcon?: components["schemas"]["ScaledImageDto"];
+      listViewIconTall?: components["schemas"]["ScaledImageDto"];
+      splashImage?: components["schemas"]["ScaledImageDto"];
+      stylizedImage?: components["schemas"]["ScaledImageDto"];
+      premierImage?: components["schemas"]["ScaledImageDto"];
+    };
+    PrivateUserDto: {
+      id?: string;
+      usertag?: string;
+      email?: string;
+      role?: string;
+    };
+  };
+  responses: never;
+  parameters: never;
+  requestBodies: never;
+  headers: never;
+  pathItems: never;
 }
+
 export type $defs = Record<string, never>;
+
 export interface operations {
-    updatePost: {
-        parameters: {
-            query: {
-                postId: string;
-                title: string;
-                fromSpot: string;
-                toSpot: string;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PostDto"];
-                };
-            };
-        };
+  updatePost: {
+    parameters: {
+      query: {
+        postId: string;
+        title: string;
+        fromSpot: string;
+        toSpot: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    createPost: {
-        parameters: {
-            query: {
-                title: string;
-                fromSpot: string;
-                toSpot: string;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody?: {
-            content: {
-                "application/json": {
-                    /** Format: binary */
-                    imageStanding: string;
-                    /** Format: binary */
-                    imageLanding: string;
-                    /** Format: binary */
-                    imageLooking: string;
-                };
-            };
+        content: {
+          "*/*": components["schemas"]["PostDto"];
         };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PostDto"];
-                };
-            };
-        };
+      };
     };
-    deletePost: {
-        parameters: {
-            query: {
-                postId: string;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PostDto"];
-                };
-            };
-        };
+  };
+  createPost: {
+    parameters: {
+      query: {
+        title: string;
+        fromSpot: string;
+        toSpot: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    createSpot: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
+    requestBody?: {
+      content: {
+        "application/json": {
+          /** Format: binary */
+          imageStanding: string;
+          /** Format: binary */
+          imageLanding: string;
+          /** Format: binary */
+          imageLooking: string;
         };
-        requestBody: {
-            content: {
-                "application/json": components["schemas"]["CreateSpotRequest"];
-            };
-        };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["SpotDto"];
-                };
-            };
-        };
+      };
     };
-    createUser: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody: {
-            content: {
-                "application/json": components["schemas"]["RegisterUserRequest"];
-            };
+        content: {
+          "*/*": components["schemas"]["PostDto"];
         };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["AuthenticationResponse"];
-                };
-            };
-        };
+      };
     };
-    refreshToken: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
+  };
+  deletePost: {
+    parameters: {
+      query: {
+        postId: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    authenticate: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody: {
-            content: {
-                "application/json": components["schemas"]["AuthenticationUserRequest"];
-            };
+        content: {
+          "*/*": components["schemas"]["PostDto"];
         };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["AuthenticationResponse"];
-                };
-            };
-        };
+      };
     };
-    uploadPicture: {
-        parameters: {
-            query: {
-                scale: number;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: {
-            content: {
-                "application/json": {
-                    /** Format: binary */
-                    image: string;
-                };
-            };
-        };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": string;
-                };
-            };
-        };
+  };
+  createSpot: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    user: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                userId: string;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": Record<string, never>;
-                };
-            };
-        };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["CreateSpotRequest"];
+      };
     };
-    getSpots: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["SpotDto"][];
-                };
-            };
+        content: {
+          "*/*": components["schemas"]["SpotDto"];
         };
+      };
     };
-    getPosts: {
-        parameters: {
-            query?: {
-                username?: string;
-                userId?: string;
-                title?: string;
-                map?: string;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PostDto"][];
-                };
-            };
-        };
+  };
+  createUser: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    getPost: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                id: string;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PostDto"];
-                };
-            };
-        };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["RegisterUserRequest"];
+      };
     };
-    getMapById: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                mapId: string;
-            };
-            cookie?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["MapDto"];
-                };
-            };
+        content: {
+          "*/*": components["schemas"]["AuthenticationResponse"];
         };
+      };
     };
-    getMaps: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["MapDto"][];
-                };
-            };
-        };
+  };
+  refreshToken: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
-    getUser: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
         };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PrivateUserDto"];
-                };
-            };
-        };
+        content?: never;
+      };
     };
-    deleteUser: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["PrivateUserDto"];
-                };
-            };
-        };
+  };
+  authenticate: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
     };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["AuthenticationUserRequest"];
+      };
+    };
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["AuthenticationResponse"];
+        };
+      };
+    };
+  };
+  uploadPicture: {
+    parameters: {
+      query: {
+        scale: number;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: {
+      content: {
+        "application/json": {
+          /** Format: binary */
+          image: string;
+        };
+      };
+    };
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": string;
+        };
+      };
+    };
+  };
+  user: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path: {
+        userId: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": Record<string, never>;
+        };
+      };
+    };
+  };
+  getSpots: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["SpotDto"][];
+        };
+      };
+    };
+  };
+  getPosts: {
+    parameters: {
+      query?: {
+        username?: string;
+        userId?: string;
+        title?: string;
+        map?: string;
+      };
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["PostDto"][];
+        };
+      };
+    };
+  };
+  getPost: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path: {
+        id: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["PostDto"];
+        };
+      };
+    };
+  };
+  getMapById: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path: {
+        mapId: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["MapDto"];
+        };
+      };
+    };
+  };
+  getMaps: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["MapDto"][];
+        };
+      };
+    };
+  };
+  getUser: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["PrivateUserDto"];
+        };
+      };
+    };
+  };
+  deleteUser: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description OK */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "*/*": components["schemas"]["PrivateUserDto"];
+        };
+      };
+    };
+  };
 }
