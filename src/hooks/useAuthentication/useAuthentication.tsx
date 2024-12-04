@@ -1,6 +1,6 @@
 import { useCookies } from "react-cookie";
 import { useContext } from "react";
-import { AuthContext, AuthType } from "main.tsx";
+import { AuthContext } from "main.tsx";
 import useApi from "hooks/useApi/useApi.tsx";
 import { enqueueSnackbar } from "notistack";
 import { components } from "api/schema";
@@ -10,10 +10,16 @@ const authTokenCookieName = "authToken";
 const useAuthentication = () => {
   const authContext = useContext(AuthContext);
   const [cookies, setCookie, removeCookies] = useCookies([authTokenCookieName]);
-  const { checkAuth } = useApi();
+  const { getAuth } = useApi();
 
   const getToken = (): components["schemas"]["AuthenticationResponse"] => {
-    return cookies[authTokenCookieName];
+    return authTokenCookieName in cookies
+      ? cookies[authTokenCookieName]
+      : undefined;
+  };
+
+  const getAuthContext = () => {
+    return authContext.data;
   };
 
   const isLoggedIn = () => {
@@ -23,11 +29,11 @@ const useAuthentication = () => {
   const verifyAuthentication = async () => {
     const token = getToken();
     if (!token) {
-      return false;
+      return undefined;
     }
 
     if (token) {
-      return await checkAuth(token.access_token, token.user_id);
+      return await getAuth(token.access_token, token.user_id);
     }
   };
 
@@ -35,7 +41,8 @@ const useAuthentication = () => {
     authData: components["schemas"]["AuthenticationResponse"],
   ) => {
     const { access_token, refresh_token, user_id } = authData;
-    const isValid = await checkAuth(access_token, user_id);
+    const response = await getAuth(access_token, user_id);
+    const isValid = response !== undefined;
 
     if (isValid) {
       setCookie(authTokenCookieName, authData);
@@ -45,6 +52,8 @@ const useAuthentication = () => {
           authToken: access_token,
           refreshToken: refresh_token,
           userid: user_id,
+          userName: response.usertag,
+          email: response.email,
           isLoggedIn: true,
         };
       });
@@ -60,14 +69,16 @@ const useAuthentication = () => {
 
   const logout = () => {
     removeCookies(authTokenCookieName);
+    authContext.setData({ isLoggedIn: false });
   };
 
   return {
-    isAuthenticated: verifyAuthentication,
+    verifyAuthentication,
     getToken,
     authenticate,
     logout,
     isLoggedIn,
+    getAuthContext,
   };
 };
 

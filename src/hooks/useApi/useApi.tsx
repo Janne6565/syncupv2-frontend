@@ -5,9 +5,13 @@ import { components } from "api/schema";
 
 const useHttpClient = (baseUrl: string) => {
   const [cookies] = useCookies(["authToken"]);
-  const token = cookies[
-    "authToken"
-  ] as components["schemas"]["AuthenticationResponse"];
+  const token =
+    "authToken" in cookies
+      ? (cookies[
+          "authToken"
+        ] as components["schemas"]["AuthenticationResponse"])
+      : { access_token: "" };
+
   const headers = token.access_token
     ? {
         Authorization: `Bearer ${token.access_token}`,
@@ -123,22 +127,31 @@ const useApi = () => {
     >;
   };
 
-  const checkAuth = async (
+  const getAuth = async (
     authToken: string,
     userId: string,
-  ): Promise<boolean> => {
+  ): Promise<undefined | components["schemas"]["PrivateUserDto"]> => {
     try {
       const responseData = (await httpClient.get("/authorized/user", {
         Authorization: "Bearer " + authToken,
       })) as components["schemas"]["PrivateUserDto"];
 
-      return responseData.id === userId;
+      if (responseData.id !== userId) {
+        return undefined;
+      }
+      return responseData;
     } catch {
-      return false;
+      return undefined;
     }
   };
 
-  return { loginUser, registerUser, getCurrentUser, getUser, checkAuth };
+  return {
+    loginUser,
+    registerUser,
+    getCurrentUser,
+    getUser,
+    getAuth,
+  };
 };
 
 export default useApi;

@@ -1,0 +1,13 @@
+@use '../../../theme/variables' as *;
+
+.link {
+    color: $color-text-h2;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: $color-text;
+}

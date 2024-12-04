@@ -1,7 +1,7 @@
-$PAGE_BACKGROUND_COLOR: rgb(20, 20, 20);
+@use '../../theme/variables' as *;
 
 .page {
-  background-color: $PAGE_BACKGROUND_COLOR;
+  background-color: $color-background;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: calc(100% - 40px);
   height: calc(100% - 40px);
@@ -21,61 +21,7 @@ $PAGE_BACKGROUND_COLOR: rgb(20, 20, 20);
   width: 100%;
 }
 
-.navBar {
-  width: 8vw;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #020D14;
-  padding-top: 10vh;
-  padding-bottom: 3vh;
-  height: 87vh;
-  border-right: thin solid #050101;
-}
-
-.navBar > div {
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-
-.navBarHeader {
-  height: 10%;
-  width: 70% !important;
-}
-
-.navBarCenter {
-  height: 50%;
-}
-
-.navBarBottom {
-  height: 20%;
-}
-
 .outlet {
   width: 100%;
   height: 100vh;
-}
-
-.navIcon {
-  width: 100%;
-}
-
-.links {
-  transition: all ease-in-out .2s;
-
-  > svg {
-    transition: fill ease .3s;
-    fill: #7fd5d195;
-  }
-}
-
-.linkActive {
-  transform: translateX(5px);
-  > svg {
-    fill: #7FD5D1;
-  }
 }

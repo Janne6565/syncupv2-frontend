@@ -1,0 +1,84 @@
+@use '../../theme/variables' as *;
+
+.navBar {
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  padding-top: 10vh;
+  padding-bottom: 3vh;
+  height: 87vh;
+  border-right: thin solid $color-background;
+}
+
+.navBar > div {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.navBarHeader {
+  height: 10%;
+  width: 70% !important;
+}
+
+.navBarCenter {
+  height: 50%;
+}
+
+.navBarBottom {
+  height: 20%;
+}
+
+.navIcon {
+  width: 100%;
+}
+
+.links {
+  transition: all ease-in-out 0.1s;
+  text-decoration: none;
+  text-align: center;
+
+  > svg {
+    width: 100%;
+    transition: fill ease 0.3s;
+    fill: transparent;
+    stroke: $color-accent;
+    stroke-width: 1px;
+  }
+
+  > div {
+    background-color: transparent;
+    border: $color-accent solid 2px;
+    transition: all ease 0.3s;
+    width: calc(100% - 4px);
+    height: auto;
+    aspect-ratio: 1;
+    color: $color-accent;
+  }
+}
+
+.links:hover {
+  > svg {
+    fill: $color-accent-lower;
+  }
+
+  > div {
+    background-color: $color-accent-lower;
+  }
+}
+
+.linkActive {
+  > svg {
+    fill: $color-accent !important;
+  }
+
+  > div {
+    background-color: $color-accent !important;
+    color: $color-primary !important;
+  }
+}

@@ -1,0 +1,76 @@
+.navBar {
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(242, 50%, 7%);
+  padding-top: 10vh;
+  padding-bottom: 3vh;
+  height: 87vh;
+  border-right: thin solid hsl(242, 50%, 5%);
+}
+
+.navBar > div {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.navBarHeader {
+  height: 10%;
+  width: 70% !important;
+}
+
+.navBarCenter {
+  height: 50%;
+}
+
+.navBarBottom {
+  height: 20%;
+}
+
+.navIcon {
+  width: 100%;
+}
+
+.links {
+  transition: all ease-in-out 0.1s;
+  text-decoration: none;
+  text-align: center;
+}
+.links > svg {
+  width: 100%;
+  transition: fill ease 0.3s;
+  fill: transparent;
+  stroke: hsl(177, 51%, 67%);
+  stroke-width: 1px;
+}
+.links > div {
+  background-color: transparent;
+  border: hsl(177, 51%, 67%) solid 2px;
+  transition: all ease 0.3s;
+  width: calc(100% - 4px);
+  height: auto;
+  aspect-ratio: 1;
+  color: hsl(177, 51%, 67%);
+}
+
+.links:hover > svg {
+  fill: hsl(177, 51%, 27%);
+}
+.links:hover > div {
+  background-color: hsl(177, 51%, 27%);
+}
+
+.linkActive > svg {
+  fill: hsl(177, 51%, 67%) !important;
+}
+.linkActive > div {
+  background-color: hsl(177, 51%, 67%) !important;
+  color: hsl(242, 50%, 7%) !important;
+}
+
+/*# sourceMappingURL=styles.module.css.map */
